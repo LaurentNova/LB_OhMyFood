@@ -1,0 +1,76 @@
+/* ----------------------------------------------------
+   RESET + BASE UNIVERSELLE 
+   (La base la plus propre et réutilisable possible)
+-----------------------------------------------------*/
+
+/* Reset moderne complet */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+
+/* Variables de base universelles */
+:root {
+    --color-bg: #ffffff;
+    --color-text: #222222;
+    --color-primary: #007bff;
+    --color-secondary: #555555;
+
+    --font-main: system-ui, sans-serif;
+
+    --container-width: 1200px;
+    --spacing: 1rem;
+}
+
+/* Base typographique */
+body {
+    font-family: var(--font-main);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+/* Liens sans style forcé */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+/* Paragraphes */
+p {
+    margin-bottom: var(--spacing);
+}
+
+/* Conteneur universel (facultatif mais standard) */
+.container {
+    width: min(var(--container-width), 100% - 2rem);
+    margin-inline: auto;
+}
+
+/* Images jamais plus grandes que leur conteneur */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Inputs + boutons sans styles parasites */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Boutons de base */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
